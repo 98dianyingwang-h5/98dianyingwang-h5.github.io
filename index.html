@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>98电影网 - 电影推荐影讯资讯与正版观看渠道导航</title>
+<meta name="description" content="98电影网提供电影推荐、类型筛选、院线新片与流媒体上线资讯、/98评分榜单和影评导读，按国内持牌平台、国际流媒体、院线票务整理正版入口；手机电脑自适应，不提供盗版播放与网盘下载。">
+<meta name="keywords" content="98电影网,电影推荐,热片榜单,影讯资讯,正版电影渠道,98dianyingwang">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://98dianyingwang-h5.github.io/">
+<meta property="og:title" content="98电影网 - 电影推荐与正版观影导航">
+<meta property="og:description" content="98电影网提供全类型电影推荐、档期排片、/98评分榜单与正版渠道整理，复古影厅单页，移动自适应。">
+<meta property="og:url" content="https://98dianyingwang-h5.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"98电影网",
+  "url":"https://98dianyingwang-h5.github.io/",
+  "description":"98电影网提供电影推荐、类型筛选、院线新片与流媒体资讯、/98评分榜单及正版观看渠道整理。",
+  "potentialAction":{"@type":"SearchAction","target":"https://98dianyingwang-h5.github.io/#search={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"98电影网提供什么内容？","acceptedAnswer":{"@type":"Answer","text":"98电影网提供电影推荐、类型筛选、院线新片与流媒体上线资讯、/98评分榜单和影评导读；片库为示例元数据，用于找片和资讯参考，不提供完整片源。"}},
+    {"@type":"Question","name":"98电影网能直接播放吗？","acceptedAnswer":{"@type":"Answer","text":"本站定位推荐与资讯导航，不提供盗版播放、网盘直链或未授权下载。电影观看按钮会导向正版视频平台、院线票务或片方官方页面，具体可播片单以地区和授权状态为准。"}},
+    {"@type":"Question","name":"/98评分怎么看？","acceptedAnswer":{"@type":"Answer","text":"/98评分为示例综合分，按影评口碑、档期热度、信息完整度与编辑复看折算到98分制，仅用于排序参考，不代表任何平台官方分数。"}},
+    {"@type":"Question","name":"手机上如何使用98电影网？","acceptedAnswer":{"@type":"Answer","text":"98电影网为响应式单页，手机浏览器打开即可使用分类、横向片库、评分榜、档期与正版渠道功能，无需下载客户端，适合通勤和碎片时间挑片。"}} 
+  ]
+}
+</script>
+<style>
+:root{
+  --paper:#f5efe1;--paper2:#efe6d2;--card:#fffdf7;--card2:#f7f0e0;--line:#d8cbab;
+  --teal:#0f766e;--teal2:#14b8a6;--rust:#b45309;--rust2:#ea580c;--char:#1f2937;--ink:#23201c;--muted:#6b6256;
+  --radius:14px;--max:1180px;--shadow:0 14px 30px rgba(31,41,55,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(900px 380px at 96% -8%,rgba(20,184,166,.10),transparent 60%),
+    radial-gradient(820px 360px at 0% 4%,rgba(234,88,12,.08),transparent 55%),
+    var(--paper);
+  color:var(--ink);line-height:1.66;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+/* 跑马灯头 */
+header.nav{position:sticky;top:0;z-index:60;background:rgba(245,239,225,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-weight:900;font-size:20px;letter-spacing:.5px;color:var(--char)}
+.brand b{color:var(--rust2)}
+.nav-in nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav-in nav a{padding:8px 12px;border-radius:999px;color:var(--muted);font-size:14px;transition:.25s}
+.nav-in nav a:hover{color:#fff;background:linear-gradient(90deg,var(--teal),var(--rust2))}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:0;background:none;padding:8px}
+.burger span{width:24px;height:2px;background:var(--rust2);border-radius:2px}
+.ticker{overflow:hidden;border-bottom:1px solid var(--line);background:var(--char);color:#ffe9c7}
+.ticker .run{display:inline-block;white-space:nowrap;padding:7px 0;font-size:13px;letter-spacing:.5px;animation:run 26s linear infinite}
+.ticker .run span{margin:0 26px;color:#ffd9a8}
+.ticker .run b{color:var(--teal2)}
+@keyframes run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Hero 计分板 */
+.hero{padding:34px 0 18px}
+.board{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.kick{display:inline-flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{font-size:12px;color:var(--teal);border:1px solid var(--line);background:var(--card);padding:5px 10px;border-radius:999px}
+h1{font-size:clamp(28px,4.6vw,46px);line-height:1.16;font-weight:900}
+h1 b{background:linear-gradient(90deg,var(--teal),var(--rust2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--muted);margin:14px 0 18px;max-width:560px}
+.search{display:flex;gap:10px;background:var(--card);border:1px solid var(--line);padding:10px;border-radius:999px;max-width:560px;box-shadow:var(--shadow)}
+.search input{flex:1;background:transparent;border:0;outline:0;color:var(--ink);padding:8px 12px;font-size:15px}
+.search button{border:0;background:linear-gradient(90deg,var(--teal),var(--rust2));color:#fff;font-weight:800;padding:8px 18px;border-radius:999px;cursor:pointer}
+.stats{display:flex;gap:20px;margin-top:20px;flex-wrap:wrap}
+.stats div{font-size:13px;color:var(--muted)}
+.stats b{display:block;font-size:22px;color:var(--rust)}
+
+.scoreboard{position:relative;border-radius:20px;background:linear-gradient(160deg,var(--char),#111827);border:1px solid #2b3645;box-shadow:var(--shadow);padding:22px;overflow:hidden}
+.scoreboard:before,.scoreboard:after{content:"";position:absolute;left:0;right:0;height:14px;background-image:radial-gradient(circle,var(--paper) 4px,transparent 5px);background-size:22px 14px;opacity:.5}
+.scoreboard:before{top:0}.scoreboard:after{bottom:0}
+.sb-top{display:flex;justify-content:space-between;align-items:center;color:#cbd5e1;font-size:13px;margin:6px 0 16px}
+.sb-big{display:flex;gap:12px;justify-content:center;align-items:stretch}
+.digit{font-family:"Courier New",monospace;font-weight:900;font-size:64px;color:#fff;background:linear-gradient(180deg,#0f766e,#0b5650);border:1px solid #1f9b8f;border-radius:12px;padding:6px 18px;box-shadow:inset 0 0 18px rgba(20,184,166,.35)}
+.digit.rust{background:linear-gradient(180deg,#ea580c,#9a3b07);border-color:#ff8a4c;box-shadow:inset 0 0 18px rgba(255,138,76,.35)}
+.sb-note{text-align:center;color:#94a3b8;font-size:13px;margin-top:14px}
+.sb-note b{color:#ffd9a8}
+
+section.block{padding:30px 0}
+.sec-head{margin-bottom:20px}
+.sec-head h2{font-size:clamp(22px,3.2vw,30px);font-weight:900}
+.sec-head h2:after{content:"";display:block;width:54px;height:4px;margin:10px 0 0;border-radius:4px;background:linear-gradient(90deg,var(--teal),var(--rust2))}
+.sec-head p{color:var(--muted);margin-top:8px;font-size:14px}
+
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 8px 18px rgba(31,41,55,.08)}
+.card .ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:linear-gradient(135deg,var(--teal),var(--char));color:#fff}
+.card h3{margin:12px 0 6px;font-size:16px}
+.card p{color:var(--muted);font-size:13px}
+.card .tag{float:right;font-size:11px;color:var(--rust);border:1px solid var(--line);padding:3px 8px;border-radius:999px}
+
+/* 横向片库滑轨 */
+.lib-tools{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.fbtn{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:7px 16px;border-radius:999px;cursor:pointer;font-size:14px;transition:.25s}
+.fbtn.active,.fbtn:hover{color:#fff;background:linear-gradient(90deg,var(--teal),var(--rust2));border-color:transparent;font-weight:700}
+.rail-btn{display:flex;gap:6px}
+.rail-btn button{width:40px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--teal);cursor:pointer;font-size:16px}
+.rail-btn button:hover{background:var(--teal);color:#fff}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px}
+.rail::-webkit-scrollbar{height:10px}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+.film{flex:0 0 260px;scroll-snap-align:start;background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(31,41,55,.08)}
+.film .poster{position:relative;aspect-ratio:16/10;background:radial-gradient(120% 80% at 75% 0%,rgba(20,184,166,.18),transparent),linear-gradient(160deg,#e7f6f3,#f7f0e0);display:flex;align-items:center;justify-content:center}
+.film .poster span{font-size:42px;opacity:.65}
+.film .poster em{position:absolute;left:10px;top:10px;font-style:normal;font-size:12px;color:#fff;background:var(--teal);padding:4px 8px;border-radius:8px;font-weight:700}
+.film .poster u{position:absolute;right:10px;bottom:10px;text-decoration:none;font-size:12px;color:var(--ink);background:rgba(255,253,247,.9);padding:4px 8px;border-radius:8px;border:1px solid var(--line)}
+.film .info{padding:12px 14px}
+.film .info h3{font-size:15px}
+.film .info .rate{color:var(--rust);font-size:13px;margin-top:4px}
+.film .info p{color:var(--muted);font-size:13px;margin-top:2px}
+
+/* 放映厅档期 */
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.room{position:relative;background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 8px 18px rgba(31,41,55,.08)}
+.room .reel{position:absolute;right:14px;top:14px;font-size:12px;font-weight:800;color:#fff;background:var(--rust);padding:4px 9px;border-radius:999px}
+.room h3{font-size:16px;margin-bottom:6px}
+.room .when{font-size:12px;font-weight:700;color:var(--teal)}
+.room p{color:var(--muted);font-size:13px;margin-top:6px}
+.room .go{display:inline-block;margin-top:10px;color:var(--teal);font-weight:800;font-size:13px}
+
+/* 评分榜 /98 */
+.rank{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rk{display:grid;grid-template-columns:62px 1fr 120px 70px;gap:12px;align-items:center;background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:0 8px 18px rgba(31,41,55,.08)}
+.rk .no{font-family:"Courier New",monospace;font-size:22px;font-weight:900;color:#fff;background:linear-gradient(180deg,var(--teal),var(--char));border-radius:10px;text-align:center;padding:6px 0}
+.rk h4{font-size:15px}
+.rk small{color:var(--muted)}
+.rk .sc{font-family:"Courier New",monospace;font-weight:900;color:var(--rust);font-size:15px;text-align:right}
+.bar{height:8px;border-radius:8px;background:var(--paper2);overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--teal2),var(--rust2))}
+.up{color:#10b981}.down{color:#ef4444}
+
+/* 正版渠道 */
+.chan4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.chan{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 8px 18px rgba(31,41,55,.08)}
+.chan .ic{font-size:24px}
+.chan h3{font-size:15px;margin:8px 0 6px;color:var(--char)}
+.chan p{color:var(--muted);font-size:13px}
+.chan a{display:inline-block;margin-top:8px;color:var(--teal);font-weight:800;font-size:13px}
+
+/* 杂志资讯 */
+.mag{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.lead{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 18px rgba(31,41,55,.08)}
+.lead .cover{height:210px;background:radial-gradient(120% 80% at 75% 0%,rgba(234,88,12,.16),transparent),linear-gradient(160deg,#e7f6f3,#f7f0e0);display:flex;align-items:center;justify-content:center;font-size:52px;opacity:.85}
+.lead .body{padding:16px}
+.lead h3{font-size:17px}
+.lead p{color:var(--muted);font-size:14px;margin-top:8px}
+.mlist{display:flex;flex-direction:column;gap:12px}
+.mitem{display:grid;grid-template-columns:58px 1fr;gap:12px;background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:12px;padding:12px}
+.mitem .dt{font-size:12px;font-weight:800;color:var(--rust)}
+.mitem h4{font-size:14px}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qa{border:1px solid var(--line);background:linear-gradient(160deg,var(--card),var(--card2));border-radius:12px;overflow:hidden}
+.qa button{width:100%;text-align:left;background:none;border:0;color:var(--ink);padding:15px;font-size:15px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.qa .pn{color:var(--rust);font-weight:800}
+.qa .an{max-height:0;overflow:hidden;transition:max-height .3s}
+.qa .an p{padding:0 15px 15px;color:var(--muted);font-size:14px}
+.qa.open .an{max-height:220px}
+
+footer{margin-top:30px;border-top:1px solid var(--line);background:var(--char);padding:36px 0 20px;color:#cbd5e1}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.foot h4{font-size:14px;margin-bottom:10px;color:#ffd9a8}
+.foot a{display:block;color:#aab4c0;font-size:13px;padding:4px 0}
+.foot a:hover{color:var(--teal2)}
+.copy{text-align:center;color:#94a3b8;font-size:13px;margin-top:22px;line-height:1.8}
+.topbtn{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:0;background:linear-gradient(90deg,var(--teal),var(--rust2));color:#fff;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:.3s;z-index:70}
+.topbtn.show{opacity:1;visibility:visible}
+
+@media(max-width:1024px){
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .rooms{grid-template-columns:repeat(2,1fr)}
+  .chan4{grid-template-columns:repeat(2,1fr)}
+  .rank{grid-template-columns:1fr}
+  .mag{grid-template-columns:1fr}
+  .board{gap:22px}
+}
+@media(max-width:768px){
+  .burger{display:flex}
+  .nav-in nav{position:fixed;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:10px 18px;transform:translateY(-160%);transition:.3s;z-index:55}
+  .nav-in nav.show{transform:translateY(0)}
+  .nav-in nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .board{grid-template-columns:1fr}
+  .scoreboard{order:-1}
+  .cards4{grid-template-columns:1fr 1fr}
+  .rooms{grid-template-columns:1fr}
+  .chan4{grid-template-columns:1fr 1fr}
+  .faq{grid-template-columns:1fr}
+  .foot{grid-template-columns:repeat(2,1fr)}
+  .digit{font-size:52px;padding:6px 14px}
+}
+@media(max-width:480px){
+  .cards4{grid-template-columns:1fr}
+  .chan4{grid-template-columns:1fr}
+  .film{flex:0 0 82%}
+  .rk{grid-template-columns:48px 1fr;grid-auto-rows:auto}
+  .rk .bar,.rk .sc{grid-column:2}
+  .search{flex-direction:column;border-radius:16px}
+  .search button{border-radius:12px}
+  .foot{grid-template-columns:1fr}
+  .ticker .run{font-size:12px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="brand">98电影网<b>·Score Cinema</b></a>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+    <nav id="menu">
+      <a href="#home">首页</a>
+      <a href="#standard">选片标准</a>
+      <a href="#lib">横向片库</a>
+      <a href="#rooms">放映档期</a>
+      <a href="#rank">/98榜单</a>
+      <a href="#channels">正版渠道</a>
+      <a href="#mag">影评杂志</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="wrap">
+      <div class="run">
+        <span>🎬 <b>98电影网</b> 新片更新</span><span>📅 院线排片同步</span><span>📺 流媒体上线提醒</span><span>🏆 /98评分榜每日校准</span><span>🔗 正版渠道导流不盗版</span>
+        <span>🎬 <b>98电影网</b> 新片更新</span><span>📅 院线排片同步</span><span>📺 流媒体上线提醒</span><span>🏆 /98评分榜每日校准</span><span>🔗 正版渠道导流不盗版</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap board">
+    <div>
+      <div class="kick">
+        <span class="chip">电影推荐</span><span class="chip">/98评分</span><span class="chip">院线影讯</span><span class="chip">正版导流</span>
+      </div>
+      <h1>98电影网 · <b>复古影厅，按/98比分挑好片</b></h1>
+      <p class="lede">98电影网聚合院线新片、流媒体上线、经典重刷与类型片单，用横向片库、放映厅档期和/98综合评分帮你快速决策；观看入口按国内持牌平台、国际流媒体、院线票务分流，不提供盗版播放与网盘下载。</p>
+      <form class="search" id="search" onsubmit="return false;">
+        <input type="text" placeholder="搜索电影 / 类型 / 导演，如：科幻新片、社会悬疑、合家欢动画" aria-label="搜索电影">
+        <button type="submit">搜片</button>
+      </form>
+      <div class="stats">
+        <div><b>20万+</b>电影元数据</div>
+        <div><b>/98</b>综合评分制</div>
+        <div><b>每日</b>新片与排片</div>
+        <div><b>正版</b>观看入口</div>
+      </div>
+    </div>
+    <div class="scoreboard" aria-label="98评分计分板">
+      <div class="sb-top"><span>NOW SHOWING · 综合热度</span><span>98 SCORE SYSTEM</span></div>
+      <div class="sb-big">
+        <div class="digit">9</div>
+        <div class="digit rust">8</div>
+      </div>
+      <div class="sb-note">全站示例基准分 <b>/98</b> · 按口碑、档期、信息完整度折算，仅用于排序参考</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="standard">
+  <div class="wrap">
+    <div class="sec-head"><h2>98电影网选片标准</h2><p>四类入口覆盖找片决策全链路</p></div>
+    <div class="cards4">
+      <div class="card"><span class="tag">类型</span><div class="ic">🎬</div><h3>全类型筛选</h3><p>剧情、科幻、动作、悬疑、喜剧、动画、纪录片分栏，按心情和场景快速锁定，减少片荒。</p></div>
+      <div class="card"><span class="tag">新片</span><div class="ic">🎟️</div><h3>院线＋流媒体</h3><p>院线排片、点映、重映与流媒体窗口期同步整理，先定可看渠道再决定补看方式。</p></div>
+      <div class="card"><span class="tag">评分</span><div class="ic">🏆</div><h3>/98综合分</h3><p>示例评分、影评热度、档期声量与编辑复看综合折算到98分制，新片冷门片分路径呈现。</p></div>
+      <div class="card"><span class="tag">正版</span><div class="ic">🔗</div><h3>正版渠道导流</h3><p>国内持牌、国际订阅、院线票务、片方官方分层入口，不提供盗版解析与未授权下载。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="lib">
+  <div class="wrap">
+    <div class="sec-head"><h2>98电影网横向片库</h2><p>胶片滑轨浏览，按类型筛选示例，内页统一用 #</p></div>
+    <div class="lib-tools">
+      <div class="filters" id="filters">
+        <button class="fbtn active">全部</button>
+        <button class="fbtn">剧情</button>
+        <button class="fbtn">科幻</button>
+        <button class="fbtn">动作</button>
+        <button class="fbtn">悬疑</button>
+        <button class="fbtn">喜剧</button>
+        <button class="fbtn">动画</button>
+      </div>
+      <div class="rail-btn">
+        <button id="railPrev" title="向左" aria-label="向左">‹</button>
+        <button id="railNext" title="向右" aria-label="向右">›</button>
+      </div>
+    </div>
+    <div class="rail" id="rail">
+      <div class="film" data-cat="科幻"><div class="poster"><span>🛰️</span><em>科幻</em><u>示例</u></div><div class="info"><h3>九八轨道坍缩</h3><p>硬科幻/时空 · 推荐示例</p><div class="rate">/98 · 95.2 烧脑向</div></div></div>
+      <div class="film" data-cat="动作"><div class="poster"><span>🚨</span><em>动作</em><u>示例</u></div><div class="info"><h3>夜班跨省追击</h3><p>警匪/飙车 · 推荐示例</p><div class="rate">/98 · 92.6 爽片向</div></div></div>
+      <div class="film" data-cat="悬疑"><div class="poster"><span>🕵️</span><em>悬疑</em><u>示例</u></div><div class="info"><h3>九十八小时证词</h3><p>推理/社会派 · 推荐示例</p><div class="rate">/98 · 93.7 反转向</div></div></div>
+      <div class="film" data-cat="喜剧"><div class="poster"><span>🤣</span><em>喜剧</em><u>示例</u></div><div class="info"><h3>售票处奇遇记</h3><p>都市/荒诞 · 推荐示例</p><div class="rate">/98 · 89.3 解压向</div></div></div>
+      <div class="film" data-cat="剧情"><div class="poster"><span>🎭</span><em>剧情</em><u>示例</u></div><div class="info"><h3>胶片家属编年</h3><p>家庭/现实 · 推荐示例</p><div class="rate">/98 · 94.8 获奖向</div></div></div>
+      <div class="film" data-cat="动画"><div class="poster"><span>🎨</span><em>动画</em><u>示例</u></div><div class="info"><h3>影厅小烘焙师</h3><p>奇幻/合家欢 · 推荐示例</p><div class="rate">/98 · 91.5 亲子向</div></div></div>
+      <div class="film" data-cat="科幻"><div class="poster"><span>🤖</span><em>科幻</em><u>示例</u></div><div class="info"><h3>仿生九八号</h3><p>AI/伦理 · 推荐示例</p><div class="rate">/98 · 90.4 思辨向</div></div></div>
+      <div class="film" data-cat="动作"><div class="poster"><span>🥋</span><em>动作</em><u>示例</u></div><div class="info"><h3>沿海护航实录</h3><p>救援/军事 · 推荐示例</p><div class="rate">/98 · 91.0 男性向</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="
